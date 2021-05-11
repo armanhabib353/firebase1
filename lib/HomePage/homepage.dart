@@ -1,7 +1,9 @@
-import 'package:armanfirebase2/HomePage/VIewModel/load_data.dart';
+import 'package:armanfirebase2/HomePage/VIewModel/add_store_view_model.dart';
 import 'package:armanfirebase2/HomePage/VIewModel/view_model.dart';
+import 'package:armanfirebase2/HomePage/add_store.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -10,11 +12,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  StoreViewModelLoadData _loadData = StoreViewModelLoadData();
+  // StoreViewModelLoadData _loadData = StoreViewModelLoadData();
+  final _loadData = FirebaseFirestore.instance.collection('store').snapshots();
 
   Widget _buildBody(){
     return StreamBuilder<QuerySnapshot>(
-      stream: _loadData.loadData,
+      stream: _loadData,
       builder: (context, snapshot) {
         if(snapshot.hasData && snapshot.data.docs.isNotEmpty) {
           return _buildList(snapshot.data);
@@ -42,13 +45,22 @@ Widget _buildListItem(StoreViewModel storeViewModel) {
     );
 }
 
+void _navigateToAddStore(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) => ChangeNotifierProvider(
+      create: (context) => AddStoreViewModel(),
+      child: AddStorePage(),
+    ), fullscreenDialog: true));
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Shop App"),
         actions: [
-          IconButton(icon: Icon(Icons.add), onPressed: () {}),
+          IconButton(icon: Icon(Icons.add), onPressed: () {
+            _navigateToAddStore(context);
+          }),
         ],
       ),
       body: _buildBody(),

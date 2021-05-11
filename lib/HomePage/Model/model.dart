@@ -15,6 +15,13 @@ class StoreModel {
     return reference.id;
   }
 
+  Map<String, dynamic> toMap(){
+    return {
+      "name": name,
+      "address": address,
+    };
+  }
+
   factory StoreModel.fromSnapshot(QueryDocumentSnapshot doc) {
     return StoreModel(doc['name'], doc['address']);
   }

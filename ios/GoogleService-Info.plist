@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1046907310985-f49h5ghug3m89195k3sdutmrk3njc8u0.apps.googleusercontent.com</string>
+	<string>873681671975-d0nm6nl7vgq3jpfrqbgjt3cja0o2hagg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1046907310985-f49h5ghug3m89195k3sdutmrk3njc8u0</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>1046907310985-h181apktkirmfcr0fji2l0jiahlp6dc1.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.873681671975-d0nm6nl7vgq3jpfrqbgjt3cja0o2hagg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBaycydF8ziMt6Cj1UBN3P_Gls63o1IaC0</string>
+	<string>AIzaSyDAmXwVIf5BMZAsB8mmsLQgJ-umNaJMPz8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1046907310985</string>
+	<string>873681671975</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.armankaspe.armanfirebase2</string>
 	<key>PROJECT_ID</key>
-	<string>kapse-ride-share</string>
+	<string>practise-4f62b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kapse-ride-share.appspot.com</string>
+	<string>practise-4f62b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1046907310985:ios:6559d2abc77b8065e70758</string>
-	<key>DATABASE_URL</key>
-	<string>https://kapse-ride-share-default-rtdb.firebaseio.com</string>
+	<string>1:873681671975:ios:702f0e76315af9e59efb02</string>
 </dict>
 </plist>
